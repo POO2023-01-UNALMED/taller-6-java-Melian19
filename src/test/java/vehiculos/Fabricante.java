@@ -46,13 +46,13 @@ public class Fabricante {
 	
 	//metodos
 	
-	public Fabricante fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		int mayor = 0;
 		Fabricante mejorFabrica = null;
 		for(int i = 0; i < listado.size(); i++) {
 			if (listado.get(i).getcantidadAutosCreados() > mayor) {
 				mayor = listado.get(i).getcantidadAutosCreados();
-				mejorFabrica = this;
+				mejorFabrica = listado.get(i);
 			} else {
 				continue;
 			}

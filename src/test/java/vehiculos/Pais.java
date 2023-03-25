@@ -38,13 +38,15 @@ public class Pais {
 	
 	//metodos
 	
-	public Pais paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		int mayor = 0;
 		Pais mejorPais = null;
 		for(int i = 0; i < listaPaises.size(); i++) {
 			if (listaPaises.get(i).getcantidadAutosCreados() > mayor) {
 				mayor = listaPaises.get(i).getcantidadAutosCreados();
-				mejorPais = this;
+				mejorPais = listaPaises.get(i);
+			} else {
+				continue;
 			}
 		}
 		return mejorPais;
